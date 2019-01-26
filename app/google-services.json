@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "140276808069",
+    "firebase_url": "https://seaking-4.firebaseio.com",
+    "project_id": "seaking-4",
+    "storage_bucket": "seaking-4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140276808069:android:0389b316a9f46315",
+        "android_client_info": {
+          "package_name": "com.example.minhy.seakingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140276808069-d0ei9mm5i8igs1847vci568ms3di154e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1R1ledse_RSMRnilF2S37ZzWU-O-gvTE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

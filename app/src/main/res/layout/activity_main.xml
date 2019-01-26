@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+    <ImageView
+        android:id="@+id/imageView_fishman"
+        android:layout_width="201dp"
+        android:layout_height="291dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fishman"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="131dp"
+        android:text="현재 시간은"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fishman"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_ShowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fishman"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Date" />
+
+    <TextView
+        android:id="@+id/textView_Temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="현재 수온은"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fishman"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ShowDate" />
+
+    <TextView
+        android:id="@+id/textView_ShowTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fishman"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Temp" />
+
+    <TextView
+        android:id="@+id/textView_pH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="현재 pH는"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fishman"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ShowTemp" />
+
+    <TextView
+        android:id="@+id/textView_ShowpH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fishman"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pH" />
+
+    <Button
+        android:id="@+id/Picture"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="40dp"
+        android:text="사진"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fishman" />
+
+    <Button
+        android:id="@+id/button_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="그래프"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Streaming"
+        app:layout_constraintStart_toEndOf="@+id/Picture"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fishman" />
+
+    <Button
+        android:id="@+id/Streaming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="40dp"
+        android:text="스트리밍"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_graph"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fishman" />
+
+</android.support.constraint.ConstraintLayout>

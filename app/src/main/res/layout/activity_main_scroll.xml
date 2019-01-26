@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Sea">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Sea"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView_Temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ShowDate"
+        app:srcCompat="@drawable/temper" />
+
+    <ImageView
+        android:id="@+id/imageView_pH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/textView_ShowTemp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ShowDate"
+        app:srcCompat="@drawable/ph" />
+
+    <ImageView
+        android:id="@+id/imageView_Temp_Warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar"
+        app:srcCompat="@drawable/warn" />
+
+    <ImageView
+        android:id="@+id/imageView_pH_Warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/textView_ShowTemp"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar"
+        app:srcCompat="@drawable/warn" />
+
+    <TextView
+        android:id="@+id/textView_ShowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar" />
+
+    <TextView
+        android:id="@+id/textView_ShowTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ShowDate" />
+
+    <TextView
+        android:id="@+id/textView_ShowpH"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView_ShowTemp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ShowDate" />
+
+    <ScrollView
+        android:id="@+id/webview_graph_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ShowTemp">
+
+        <WebView
+            android:id="@+id/webview_graph"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_Temp"
+            tools:layout_editor_absoluteX="107dp"></WebView>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/checkpic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/streaming"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webview_graph_scroll"
+        app:srcCompat="@drawable/checkpic" />
+
+    <Button
+        android:id="@+id/Picture"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@color/Sea"
+        android:backgroundTint="@color/Sea"
+        android:text="사진확인"
+        app:layout_constraintEnd_toStartOf="@+id/Streaming"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkpic" />
+
+    <ImageView
+        android:id="@+id/streaming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkpic"
+        app:layout_constraintTop_toBottomOf="@+id/webview_graph_scroll"
+        app:srcCompat="@drawable/streaming" />
+
+    <Button
+        android:id="@+id/Streaming"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:background="@color/Sea"
+        android:backgroundTint="@color/Sea"
+        android:text="스트리밍"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Picture"
+        app:layout_constraintTop_toBottomOf="@+id/streaming" />
+
+</android.support.constraint.ConstraintLayout>
+
